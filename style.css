@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.wrapper {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+textarea {
+  margin-top: 2rem;
+  height: 45rem;
+  width: 100%;
+  resize: none;
+  font-size: 2.5rem;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.keyboard {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  background: #adadad;
+  border: 0.2rem solid #111111;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 0.3rem;
+  flex-grow: 1;
+  height: 7rem;
+  background:#323746;
+  border: 0.1rem solid #000000;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #e4e4e5;
+  user-select: none;
+}
+
+.Tab,
+.Delete {
+  flex-grow: 2;
+}
+
+.Space {
+  flex-grow: 7;
+}
+
+.key:hover {
+  background: #4f566e;
+}
+
+.activated{
+  background: #326d8c;
+  border-color: #125d5c;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.active,
+.key:active {
+  background: #4f566e;  
+  transform: scale(0.92, 0.92);
+  box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem rgb(19,22,212);
+  transition: 0.1s;
+}
+
+.Volume,
+.Volume:hover {
+  background-image: url(./assets/icons/volume_on.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.Speech,
+.Speech:hover {
+  background-image: url(./assets/icons/speech.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.Hide,
+.Hide:hover {
+  background-image: url(./assets/icons/hide.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+@media screen and (max-width: 1020px) {
+
+textarea {
+  height: 30rem;
+}
+
+.key {
+  height: 5rem;
+  font-size: 2rem;
+}
+}
+
+@media screen and (max-width: 767px) {
+  
+textarea {
+  height: 20rem;
+  font-size: 2rem;
+}
+
+.key {
+  height: 3rem;
+  font-size: 1.4rem;
+}
+
+.Space {
+  flex-grow: 9;
+}
+}
