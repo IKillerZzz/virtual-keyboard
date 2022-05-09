@@ -18,7 +18,7 @@ class Keyboard {
 
     container.className = 'wrapper';
     document.body.prepend(container);
-    this.output.setAttribute('placeholder', 'CLick here to start');
+    this.output.setAttribute('placeholder', 'Made on Windows OS. CLick here to start');
     this.keyboard.className = 'keyboard hidden';
     this.keyboard.dataset.language = this.language;
     container.append(this.output, this.keyboard);
